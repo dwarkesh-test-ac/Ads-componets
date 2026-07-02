@@ -5,7 +5,7 @@ var __export = (target, all3) => {
 };
 
 // src/Ad_auto_runing_component.jsx
-import React2, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // node_modules/axios/lib/helpers/bind.js
 function bind(fn, thisArg) {
@@ -3303,7 +3303,7 @@ function AutoAdRunner({ children, Code, skipTime, waiting }) {
     }
   };
   const [closeButtonHovered, setCloseButtonHovered] = useState(false);
-  return /* @__PURE__ */ React2.createElement(React2.Fragment, null, /* @__PURE__ */ React2.createElement("style", null, `
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("style", null, `
                 @media (min-width: 768px) {
                     .media-container-responsive {
                         height: 75vh !important;
@@ -3319,19 +3319,19 @@ function AutoAdRunner({ children, Code, skipTime, waiting }) {
                         height: 88vh !important;
                     }
                 }
-            `), /* @__PURE__ */ React2.createElement("div", { style: styles2.appContainer }, children, showOverlay && /* @__PURE__ */ React2.createElement(
+            `), /* @__PURE__ */ React.createElement("div", { style: styles2.appContainer }, children, showOverlay && /* @__PURE__ */ React.createElement(
     "div",
     {
       style: styles2.overlayBackdrop,
       onClick: redirectto
     },
-    /* @__PURE__ */ React2.createElement(
+    /* @__PURE__ */ React.createElement(
       "div",
       {
         style: styles2.overlayModal,
         onClick: (e) => e.stopPropagation()
       },
-      /* @__PURE__ */ React2.createElement("div", { style: styles2.modalHeader }, /* @__PURE__ */ React2.createElement("div", { style: styles2.headerTitle, onClick: redirectto }, "Ad run by Dwarkesh & team"), /* @__PURE__ */ React2.createElement("div", { style: styles2.headerControls }, timesing && /* @__PURE__ */ React2.createElement("div", { style: styles2.countdownBadge }, cundown), cross && /* @__PURE__ */ React2.createElement(
+      /* @__PURE__ */ React.createElement("div", { style: styles2.modalHeader }, /* @__PURE__ */ React.createElement("div", { style: styles2.headerTitle, onClick: redirectto }, "Ad run by Dwarkesh & team"), /* @__PURE__ */ React.createElement("div", { style: styles2.headerControls }, timesing && /* @__PURE__ */ React.createElement("div", { style: styles2.countdownBadge }, cundown), cross && /* @__PURE__ */ React.createElement(
         "button",
         {
           type: "button",
@@ -3346,7 +3346,7 @@ function AutoAdRunner({ children, Code, skipTime, waiting }) {
         },
         "\xD7"
       ))),
-      /* @__PURE__ */ React2.createElement("div", { style: styles2.mediaContainer, className: "media-container-responsive" }, /* @__PURE__ */ React2.createElement("div", { style: styles2.clickableOverlay, onClick: redirectto }), /\.(jpe?g|png|gif|webp|avif|svg)$/i.test(adlink) ? /* @__PURE__ */ React2.createElement(
+      /* @__PURE__ */ React.createElement("div", { style: styles2.mediaContainer, className: "media-container-responsive" }, /* @__PURE__ */ React.createElement("div", { style: styles2.clickableOverlay, onClick: redirectto }), /\.(jpe?g|png|gif|webp|avif|svg)$/i.test(adlink) ? /* @__PURE__ */ React.createElement(
         "img",
         {
           src: adlink,
@@ -3354,7 +3354,7 @@ function AutoAdRunner({ children, Code, skipTime, waiting }) {
           style: styles2.adImage,
           draggable: false
         }
-      ) : /* @__PURE__ */ React2.createElement(
+      ) : /* @__PURE__ */ React.createElement(
         "iframe",
         {
           style: styles2.adIframe,
@@ -3363,13 +3363,13 @@ function AutoAdRunner({ children, Code, skipTime, waiting }) {
           allow: "autoplay; fullscreen"
         }
       )),
-      /* @__PURE__ */ React2.createElement("div", { style: styles2.modalFooter }, /* @__PURE__ */ React2.createElement("div", { style: styles2.footerText }, "Sponsored"), /* @__PURE__ */ React2.createElement("div", { style: styles2.footerText }, "Click anywhere to continue"))
+      /* @__PURE__ */ React.createElement("div", { style: styles2.modalFooter }, /* @__PURE__ */ React.createElement("div", { style: styles2.footerText }, "Sponsored"), /* @__PURE__ */ React.createElement("div", { style: styles2.footerText }, "Click anywhere to continue"))
     )
   )));
 }
 
 // src/Ad_click_running_component.jsx
-import { useState as useState2, useEffect as useEffect2, useRef as useRef2 } from "react";
+import React2, { useState as useState2, useEffect as useEffect2, useRef as useRef2 } from "react";
 var styles = `
   .click-ad-runner-trigger {
     cursor: pointer;
@@ -3638,7 +3638,7 @@ function ClickAdRunner({ text, Code, skipTime }) {
     if (enableTimerRef.current) clearTimeout(enableTimerRef.current);
     if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
   }, []);
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("style", null, styles), /* @__PURE__ */ React.createElement("span", { onClick: handleOpenClick, className: "click-ad-runner-trigger" }, text), open && /* @__PURE__ */ React.createElement("div", { className: "click-ad-runner-backdrop", onClick: handleBackdropClick }, /* @__PURE__ */ React.createElement("div", { className: "click-ad-runner-modal", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React.createElement("div", { className: "click-ad-runner-header" }, /* @__PURE__ */ React.createElement("div", { className: "click-ad-runner-header-text", onClick: sendClickAndRedirect }, "Ad run by Dwarkesh & team"), /* @__PURE__ */ React.createElement("div", { className: "click-ad-runner-header-actions" }, counting && /* @__PURE__ */ React.createElement("div", { className: "click-ad-runner-countdown" }, countdown), /* @__PURE__ */ React.createElement("button", { type: "button", onClick: handleClose, disabled: !enabled, className: "click-ad-runner-close-button" }, enabled ? "Close" : `Wait ${countdown}s`))), /* @__PURE__ */ React.createElement("div", { className: "click-ad-runner-content click-ad-runner-content-mobile" }, /* @__PURE__ */ React.createElement("div", { className: "click-ad-runner-clickable-overlay", onClick: sendClickAndRedirect }), /\.(jpe?g|png|gif|webp|avif|svg)$/i.test(adlink) ? /* @__PURE__ */ React.createElement("img", { src: adlink, alt: "Ad", className: "click-ad-runner-image", draggable: false }) : /* @__PURE__ */ React.createElement("iframe", { className: "click-ad-runner-iframe", src: adlink, title: "Ad", allow: "autoplay; fullscreen" })))));
+  return /* @__PURE__ */ React2.createElement(React2.Fragment, null, /* @__PURE__ */ React2.createElement("style", null, styles), /* @__PURE__ */ React2.createElement("span", { onClick: handleOpenClick, className: "click-ad-runner-trigger" }, text), open && /* @__PURE__ */ React2.createElement("div", { className: "click-ad-runner-backdrop", onClick: handleBackdropClick }, /* @__PURE__ */ React2.createElement("div", { className: "click-ad-runner-modal", onClick: (e) => e.stopPropagation() }, /* @__PURE__ */ React2.createElement("div", { className: "click-ad-runner-header" }, /* @__PURE__ */ React2.createElement("div", { className: "click-ad-runner-header-text", onClick: sendClickAndRedirect }, "Ad run by Dwarkesh & team"), /* @__PURE__ */ React2.createElement("div", { className: "click-ad-runner-header-actions" }, counting && /* @__PURE__ */ React2.createElement("div", { className: "click-ad-runner-countdown" }, countdown), /* @__PURE__ */ React2.createElement("button", { type: "button", onClick: handleClose, disabled: !enabled, className: "click-ad-runner-close-button" }, enabled ? "Close" : `Wait ${countdown}s`))), /* @__PURE__ */ React2.createElement("div", { className: "click-ad-runner-content click-ad-runner-content-mobile" }, /* @__PURE__ */ React2.createElement("div", { className: "click-ad-runner-clickable-overlay", onClick: sendClickAndRedirect }), /\.(jpe?g|png|gif|webp|avif|svg)$/i.test(adlink) ? /* @__PURE__ */ React2.createElement("img", { src: adlink, alt: "Ad", className: "click-ad-runner-image", draggable: false }) : /* @__PURE__ */ React2.createElement("iframe", { className: "click-ad-runner-iframe", src: adlink, title: "Ad", allow: "autoplay; fullscreen" })))));
 }
 
 // src/index.jsx
